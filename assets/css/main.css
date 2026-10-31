@@ -62,6 +62,22 @@ main > section {
   font-weight: 650;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
 .hero {
   padding-block: clamp(5rem, 12vw, 9rem);
 }
@@ -124,9 +140,91 @@ h3 {
   background: transparent;
 }
 
-.focus {
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.secondary-link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.credibility {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  padding-block: 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.credibility p {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--surface);
+}
+
+.credibility span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.focus,
+.content-section {
   padding-block: 5rem;
   border-top: 1px solid var(--line);
+}
+
+.prose {
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
+
+.experience-list {
+  border-top: 1px solid var(--line);
+}
+
+.experience-list article {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.35fr) 1fr;
+  column-gap: clamp(2rem, 6vw, 6rem);
+  padding-block: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-list article > :not(.experience-meta) {
+  grid-column: 2;
+}
+
+.experience-meta {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experience-list article > p:not(.experience-meta):not(.tags),
+.tags {
+  color: var(--muted);
+}
+
+.tags {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  font-weight: 650;
 }
 
 .section-heading {
@@ -179,6 +277,15 @@ h3 {
   background: transparent;
 }
 
+.profile-links {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.profile-links a {
+  color: #fff;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -193,8 +300,28 @@ h3 {
 }
 
 @media (max-width: 44rem) {
-  .focus-grid {
+  .site-header {
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.35rem 1rem;
+    text-align: right;
+  }
+
+  .focus-grid,
+  .credibility {
     grid-template-columns: 1fr;
+  }
+
+  .experience-list article {
+    display: block;
+  }
+
+  .experience-meta {
+    margin-bottom: 0.75rem;
   }
 
   .site-footer {

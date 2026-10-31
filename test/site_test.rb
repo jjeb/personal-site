@@ -17,6 +17,19 @@ class SiteTest < Minitest::Test
     assert_includes @html, "Developer tooling"
   end
 
+  def test_homepage_contains_complete_navigation_and_sections
+    %w[story experience work conversation].each do |section|
+      assert_includes @html, "##{section}"
+      assert_includes @html, "id=\"#{section}\""
+    end
+
+    assert_includes @html, "Shopify"
+    assert_includes @html, "LendingHome"
+    assert_includes @html, "ModCloth"
+    assert_includes @html, 'href="https://github.com/jjeb"'
+    assert_includes @html, 'href="https://www.linkedin.com/in/juesparza/"'
+  end
+
   def test_homepage_invites_a_conversation
     assert_includes @html, 'href="https://calendly.com/juanj-esparza/30-minutes" target="_blank" rel="noopener noreferrer"'
     assert_includes @html, "Schedule a conversation"
