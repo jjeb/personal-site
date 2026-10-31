@@ -35,5 +35,5 @@ description: Juan Esparza works with people navigating complex systems, technica
   <p class="eyebrow">Conversation</p>
   <h2 id="conversation-title">Have a difficult technical question?</h2>
   <p>An introductory conversation is a simple way to see whether I can be useful.</p>
-  <a class="button button-light" href="https://calendly.com/juanj-esparza/30-minutes">Schedule a conversation</a>
+  <a class="button button-light" href="https://calendly.com/juanj-esparza/30-minutes" target="_blank" rel="noopener noreferrer">Schedule a conversation</a>
 </section>

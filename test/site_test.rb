@@ -18,7 +18,7 @@ class SiteTest < Minitest::Test
   end
 
   def test_homepage_invites_a_conversation
-    assert_includes @html, 'href="https://calendly.com/juanj-esparza/30-minutes"'
+    assert_includes @html, 'href="https://calendly.com/juanj-esparza/30-minutes" target="_blank" rel="noopener noreferrer"'
     assert_includes @html, "Schedule a conversation"
   end
 
