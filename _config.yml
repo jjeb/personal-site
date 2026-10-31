@@ -1,0 +1,10 @@
+title: Juan Esparza
+description: Technical advising and developer tooling for complex systems.
+url: "https://jjeb.github.io"
+baseurl: "/personal-site"
+markdown: kramdown
+exclude:
+  - README.md
+  - AGENTS.md
+  - test
+  - docs
