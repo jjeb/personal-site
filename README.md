@@ -27,7 +27,7 @@ The smoke test reads the generated `_site/index.html`, so build the site first.
 
 Everything rendered by this repository is public. Keep copy concise and verifiable. Do not add confidential material, private notes, client details, or claims that cannot be supported publicly. V1 intentionally contains no blog or content system beyond the homepage and 404 page.
 
-The scheduling link currently uses a placeholder URL and must be replaced with a confirmed public booking URL before it is promoted.
+The scheduling call to action links to Juan's confirmed 30-minute Calendly booking page.
 
 ## Deployment
 
